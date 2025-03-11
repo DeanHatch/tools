@@ -1,0 +1,91 @@
+%! 
+/Helvetica findfont 8 scalefont setfont 
+%%For: generated !datetimedone-bywhom..!  
+%%Version: 20091230  
+%% define "constants"
+/drhlineheight  10  def 
+/drhleftmargin  50  def 
+%% Set up column tabs and the means to move to them
+/drhcolumns [drhleftmargin
+             drhleftmargin 110 add
+             drhleftmargin 170 add
+             drhleftmargin 300 add
+             drhleftmargin 370 add] def
+%% move to column n, called by "n drhtabto"  
+/drhtabto {drhcolumns exch get currentpoint exch pop moveto} def
+%% define a "smart" linefeed
+/drhlinefeed {currentpoint pop neg 0 rmoveto drhleftmargin drhlineheight neg rmoveto} def
+/drhpageno 1 def
+%%/drhdocumenttitle (Linux Server SAS Statuses) def
+%% define headings
+/drhh1 {gsave /Helvetica-Bold findfont 24 scalefont setfont show grestore} def 
+/drhh2 {gsave /Helvetica-Bold findfont 22 scalefont setfont show grestore} def 
+/drhh3 {gsave /Helvetica-Bold findfont 12 scalefont setfont show grestore} def 
+/drhh4 {gsave /Helvetica-Bold findfont 8 scalefont setfont show grestore} def  
+%% table-title and super-script  
+/drhtt {gsave /Helvetica-Bold findfont 11 scalefont setfont show grestore} def 
+/drhss {gsave /Helvetica findfont 6 scalefont setfont 0 3 rmoveto show 0 -3 rmoveto grestore} def
+%% label-font-small and label-font and label-font-bold and label-font-italic
+/drhlfs {/Helvetica findfont 7 scalefont setfont} def
+/drhlf {/Helvetica findfont 8 scalefont setfont} def
+/drhlfb {/Helvetica-Bold findfont 8 scalefont setfont} def
+/drhlfi {/Helvetica-Italic findfont 8 scalefont setfont} def 
+%% data-font, district-data-font, and data-column  
+/drhdf {/Courier-Bold findfont 8 scalefont setfont} def  
+/drhddf {/Courier-Bold findfont 7 scalefont setfont} def 
+/drhdc {moveto show} def
+%% note-start and note-end 
+/drhns {gsave /Helvetica findfont 6 scalefont setfont} def
+/drhne {show grestore} def 
+%% small-font start and end
+/drhsmall {gsave /Helvetica findfont 6 scalefont setfont} def
+/drhllams {grestore} def 
+/drhgreenrev {gsave /Helvetica-Bold findfont 0.2 0.2 1 setrgbcolor} def
+/drhverneerg {grestore} def 
+/drhredrev {gsave /Helvetica-Bold findfont 1 0 0 setrgbcolor} def
+/drhverder {grestore} def 
+%% center a string at a point, called by "(string) x y drhca"  
+%% operates by moving to the center of the string, determining the width of
+%% the string, dividing the width by two, and moving back (left) that amount  
+/drhca {moveto dup stringwidth pop 2 div neg 0 rmoveto show} def  
+/drhcac {3 copy moveto  
+         dup stringwidth pop 2 div neg 0 rmoveto show 
+         3 -1 roll stringwidth pop 2 div 2 add 0 360 arc closepath stroke} def
+%% right-justify a string to a point, called by "(string) x y drhrj" 
+%% operates by determining the width of
+%% the string and moving back (left) that amount
+/drhrj {moveto dup stringwidth pop neg 0 rmoveto show} def  
+%% hyperlink-start and hyperlink-end
+/drhhls {0 0 1 setrgbcolor} def  
+/drhhle {0 setgray} def 
+%% cover-note-font
+/drhcnf {/Times-Roman findfont 12 scalefont setfont} def 
+%% Decorations
+/drhdecor {drhtitle drhpageno drhborder} def
+/drhtitle {297.5 770 moveto 
+           gsave /Helvetica-Bold findfont 24 scalefont setfont 
+           dup stringwidth pop 2 div neg 0 rmoveto show grestore} def
+/drhpageno {297.5 40 moveto 
+           gsave /Helvetica-Bold findfont 6 scalefont setfont 
+           dup stringwidth pop 2 div neg 0 rmoveto show grestore} def
+/drhfootnote1 {297.5 drhleftmargin moveto 
+              gsave /Helvetica-Bold findfont 6 scalefont setfont 
+              dup stringwidth pop 2 div neg 0 rmoveto show grestore} def
+/drhfootnote2 {297.5 60 moveto 
+              gsave /Helvetica-Bold findfont 6 scalefont setfont 
+              dup stringwidth pop 2 div neg 0 rmoveto show grestore} def
+/drhfootnote3 {297.5 70 moveto 
+              gsave /Helvetica-Bold findfont 6 scalefont setfont 
+              dup stringwidth pop 2 div neg 0 rmoveto show grestore} def
+/drhborder {35 55 moveto 0 700 rlineto 540 0 rlineto 0 -700 rlineto -540 0 rlineto stroke} def
+/drhsubtitle {297.5 690 moveto 
+           gsave /Helvetica-Bold findfont 10 scalefont setfont 
+           dup stringwidth pop 2 div neg 0 rmoveto show grestore} def
+/drhsmalltitle {297.5 740 moveto 
+           gsave /Helvetica-Bold findfont 6 scalefont setfont 
+           dup stringwidth pop 2 div neg 0 rmoveto show grestore} def
+gsave
+
+%%(page no 1) drhdocumenttitle drhdecor
+%% Position at Upper Left
+drhleftmargin 720 moveto
