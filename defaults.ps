@@ -5,22 +5,31 @@
 %% Use column tabs as they have been defined
 /drhpageno 1 def
 /drhdocumenttitle (Default PostScript definitions) def
+%% Decorations
+(drhtitle) drhtitle
+(drhfootnote1) drhfootnote1
+(drhfootnote2) drhfootnote2
+(drhfootnote3) drhfootnote3
+(drhsmalltitle) drhsmalltitle
+(drhsubtitle) drhsubtitle
+drhlinefeed
+drhlinefeed
 %% define headings
-(drhh1) drhh1
+(drhh1 - Analgous to HTML H1 Tag) drhh1
 drhlinefeed
 drhlinefeed
 drhlinefeed
-(drhh2) drhh2
+(drhh2 - Analgous to HTML H2 Tag) drhh2
 drhlinefeed
 drhlinefeed
-(drhh3) drhh3
+(drhh3 - Analgous to HTML H3 Tag) drhh3
 drhlinefeed
-(drhh4) drhh4
+(drhh4 - Analgous to HTML H4 Tag) drhh4
 drhlinefeed
 %% table-title and super-script  
-(drhtt) drhtt
+(drhtt Table Title) drhtt
 drhlinefeed
-(text) show (drhss) drhss
+(text) show (drhss superscript) drhss
 drhlinefeed
 drhlinefeed
 drhlinefeed
@@ -28,21 +37,21 @@ drhlinefeed
 (Fonts:) drhh2
 drhlinefeed
 %% label-font-small and label-font and label-font-bold and label-font-italic
-drhlfs (drhlfs) show
+drhlfs (drhlfs \(label font small\)) show
 drhlinefeed
-drhlf (drhlf) show
+drhlf (drhlf \(label font\)) show
 drhlinefeed
-drhlfb (drhlfb) show
+drhlfb (drhlfb \(label font bold\)) show
 drhlinefeed
-drhlfi (drhlfi) show
+drhlfi (drhlfi \(label font italicized\)) show
 drhlinefeed
 %% data-font, district-data-font, and data-column  
-drhdf (drhdf) show
+drhdf (drhdf \(data font\)) show
 drhlinefeed
-drhddf (drhddf) show
+drhdfs (drhdfs \(data font small\)) show
 drhlinefeed
 %% note-start and note-end 
-drhns (this is between drhns and drhne) drhne 
+drhns (this is between drhns and drhne \(note-start and note-end\)) drhne 
 %% small-font start and end
 drhsmall (drhsmall starts small drhllams ends small) drhllams
 drhlinefeed
@@ -88,13 +97,6 @@ drhhls (A Hyperlink is started by drhhls and ended by drhhle) show drhhle
 drhlinefeed
 %% cover-note-font
 drhcnf (drhcnf) show
-%% Decorations
-(drhtitle) drhtitle
-(drhfootnote1) drhfootnote1
-(drhfootnote2) drhfootnote2
-(drhfootnote3) drhfootnote3
-(drhsubtitle) drhsubtitle
-(drhsmalltitle) drhsmalltitle
 gsave
 
 %%(page no 1) drhdocumenttitle drhdecor
